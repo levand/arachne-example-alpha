@@ -1,4 +1,3 @@
 # example-alpha
 
-This is a simple example project that utilizes Arachne's core module, and
-nothing else.
+This is a simple example Arachne project used for testing & development.
