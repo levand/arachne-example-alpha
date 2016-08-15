@@ -3,8 +3,8 @@
  :description "An example Arachne project that depends only on the core module"
  :license {"Apache Software License 2.0" "http://www.apache.org/licenses/LICENSE-2.0"}
  :deps [[org.clojure/clojure "1.9.0-alpha10"]
-        [org.arachne-framework/arachne-pedestal
-         ["/Users/luke/src/arachne-framework/arachne-pedestal" "a7f97efc"] :local "../arachne-pedestal"]
+        ;[org.arachne-framework/arachne-pedestal ["/Users/luke/src/arachne-framework/arachne-pedestal" "6a31a7dc"] :local "../arachne-pedestal"]
+        [org.arachne-framework/arachne-pedestal ["/Users/luke/src/arachne-framework/arachne-pedestal" "6a31a7dc"]]
         [adzerk/boot-test "1.1.2" :scope "test"]
         [datascript "0.15.0" :scope "test"]
         [com.datomic/datomic-free "0.9.5350"
