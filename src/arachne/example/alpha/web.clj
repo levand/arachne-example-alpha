@@ -1,7 +1,7 @@
 (ns arachne.example.alpha.web
   (:require [ring.util.response :as ring-resp]
             [clojure.string :as str]
-            [io.pedestal.interceptor :as i]))
+            [arachne.http :as http]))
 
 (defn hello-world-handler
   "Constructor for a hello-world interceptor"
@@ -17,10 +17,6 @@
               "optimistic fool"))})
 
 (defrecord StatusHandler [data-source]
-  i/IntoInterceptor
-  (-interceptor [this]
-    (println "getting interceptor...")
-    (i/interceptor
-      (fn [req]
-        (println "inside handler")
-        (ring-resp/response (str "Current state: " @(:state data-source)))))))
+  http/Handler
+  (handle [_ req]
+    (ring-resp/response (str "Current state: " @(:state data-source)))))
